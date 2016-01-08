@@ -1,11 +1,3 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
-
-
 ## Loading and preprocessing the data
 ```{r loaddata}
 activity <- read.csv("D:\\Study\\DataScience\\Coursera_Assignments\\Course5\\Week1_Assignment\\RepData_PeerAssessment1\\activity.csv")
