@@ -74,7 +74,16 @@ hist(total_step_imp$steps, breaks = 20,
      col = "grey", border = "white", xlab = "Step", axes = FALSE)
 axis(1)
 axis(2, las = 1)
+mean(total_step_imp$steps)
+median(total_step_imp$steps)
 ```
+
+Mean and median values are higher after imputing missing data. The reason is
+that in the original data, there are some days with `steps` values `NA` for 
+any `interval`. The total number of steps taken in such days are set to 0s by
+default. However, after replacing missing `steps` values with the mean `steps`
+of associated `interval` value, these 0 values are removed from the histogram
+of total number of steps taken each day.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 First, let's find the day of the week for each measurement in the dataset. In
